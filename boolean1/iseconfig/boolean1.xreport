@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2025-11-20T09:04:12</DateModified>
+  <DateModified>2025-11-20T09:21:55</DateModified>
   <ModuleName>boolean1</ModuleName>
   <SummaryTimeStamp>2025-11-20T08:51:01</SummaryTimeStamp>
-  <SavedFilePath>/home/ciro/vhdl/boolean1/iseconfig/boolean1.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/ciro/vhdl/boolean1</ImplementationReportsDirectory>
+  <SavedFilePath>/home/ciro/projects/ise_basics/boolean1/iseconfig/boolean1.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>/home/ciro/projects/ise_basics/boolean1/</ImplementationReportsDirectory>
   <DateInitialized>2025-11-20T08:50:51</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

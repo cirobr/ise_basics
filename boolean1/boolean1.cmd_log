@@ -1,1 +1,0 @@
-xst -intstyle ise -ifn "/home/ciro/vhdl/boolean1/boolean1.xst" -ofn "/home/ciro/vhdl/boolean1/boolean1.syr" 
