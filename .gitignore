@@ -6,15 +6,11 @@ iseconfig/
 xlnx_auto_0_xdb/
 xst/
 
-# instances
-adder1*
-!adder1.bin
-!adder1.ucf
-!adder1.vhd
-!adder1_summary.html
-
 # project
 *.gise
+*.jhd
+*_summary.html
+sch2HdlBatchFile
 
 # files
 par_usage_statistics.html
