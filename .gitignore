@@ -1,17 +1,5 @@
-# folders
-_ngo/
 _xmsgs/
-ipcore_dir/
-iseconfig/
-xlnx_auto_0_xdb/
 xst/
-
-# project
+*.xreport
 *.gise
 *.jhd
-*_summary.html
-sch2HdlBatchFile
-
-# files
-par_usage_statistics.html
-*webtalk*.*
