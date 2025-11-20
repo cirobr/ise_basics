@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "/home/ciro/vhdl/boolean2/boolean2_isim_beh.exe" -prj "/home/ciro/vhdl/boolean2/boolean2_beh.prj" "work.boolean2" 
