@@ -28,6 +28,7 @@ xst/
 *.pcf
 *.prj
 *.ptwx
+*.schlog
 *.st*
 *.syr
 *.tw*

@@ -6,19 +6,18 @@
         <trait edittrait="all:0" />
     </attr>
     <netlist>
-        <signal name="XLXN_8" />
         <signal name="XLXN_9" />
         <signal name="XLXN_10" />
-        <signal name="a" />
-        <signal name="b" />
-        <signal name="c" />
-        <signal name="d" />
-        <signal name="y" />
-        <port polarity="Input" name="a" />
-        <port polarity="Input" name="b" />
-        <port polarity="Input" name="c" />
-        <port polarity="Input" name="d" />
-        <port polarity="Output" name="y" />
+        <signal name="dp1" />
+        <signal name="dp2" />
+        <signal name="dp3" />
+        <signal name="dp4" />
+        <signal name="d1" />
+        <port polarity="Input" name="dp1" />
+        <port polarity="Input" name="dp2" />
+        <port polarity="Input" name="dp3" />
+        <port polarity="Input" name="dp4" />
+        <port polarity="Output" name="d1" />
         <blockdef name="and2">
             <timestamp>2000-1-1T10:10:10</timestamp>
             <line x2="64" y1="-64" y2="-64" x1="0" />
@@ -41,19 +40,19 @@
             <line x2="48" y1="-48" y2="-48" x1="112" />
         </blockdef>
         <block symbolname="and2" name="XLXI_4">
-            <blockpin signalname="b" name="I0" />
-            <blockpin signalname="a" name="I1" />
+            <blockpin signalname="dp2" name="I0" />
+            <blockpin signalname="dp1" name="I1" />
             <blockpin signalname="XLXN_9" name="O" />
         </block>
         <block symbolname="and2" name="XLXI_5">
-            <blockpin signalname="d" name="I0" />
-            <blockpin signalname="c" name="I1" />
+            <blockpin signalname="dp4" name="I0" />
+            <blockpin signalname="dp3" name="I1" />
             <blockpin signalname="XLXN_10" name="O" />
         </block>
         <block symbolname="or2" name="XLXI_6">
             <blockpin signalname="XLXN_10" name="I0" />
             <blockpin signalname="XLXN_9" name="I1" />
-            <blockpin signalname="y" name="O" />
+            <blockpin signalname="d1" name="O" />
         </block>
     </netlist>
     <sheet sheetnum="1" width="3520" height="2720">
@@ -70,26 +69,26 @@
             <wire x2="560" y1="352" y2="432" x1="560" />
             <wire x2="640" y1="352" y2="352" x1="560" />
         </branch>
-        <branch name="a">
+        <branch name="dp1">
             <wire x2="240" y1="160" y2="160" x1="208" />
         </branch>
-        <iomarker fontsize="28" x="208" y="160" name="a" orien="R180" />
-        <branch name="b">
+        <iomarker fontsize="28" x="208" y="160" name="dp1" orien="R180" />
+        <branch name="dp2">
             <wire x2="240" y1="224" y2="224" x1="208" />
         </branch>
-        <iomarker fontsize="28" x="208" y="224" name="b" orien="R180" />
-        <branch name="c">
+        <iomarker fontsize="28" x="208" y="224" name="dp2" orien="R180" />
+        <branch name="dp3">
             <wire x2="224" y1="400" y2="400" x1="208" />
             <wire x2="240" y1="400" y2="400" x1="224" />
         </branch>
-        <branch name="d">
+        <branch name="dp4">
             <wire x2="240" y1="464" y2="464" x1="208" />
         </branch>
-        <iomarker fontsize="28" x="208" y="464" name="d" orien="R180" />
-        <branch name="y">
+        <iomarker fontsize="28" x="208" y="464" name="dp4" orien="R180" />
+        <branch name="d1">
             <wire x2="928" y1="320" y2="320" x1="896" />
         </branch>
-        <iomarker fontsize="28" x="928" y="320" name="y" orien="R0" />
-        <iomarker fontsize="28" x="208" y="400" name="c" orien="R180" />
+        <iomarker fontsize="28" x="928" y="320" name="d1" orien="R0" />
+        <iomarker fontsize="28" x="208" y="400" name="dp3" orien="R180" />
     </sheet>
 </drawing>
