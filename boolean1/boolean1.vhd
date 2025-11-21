@@ -14,11 +14,11 @@ architecture boolean1_arch of boolean1 is
 	signal y : STD_LOGIC;
 
 begin
-    y <= not ( (a and b) or (c and d) );
+    y <= (a and b) or (c and d);
 
 	a <= dp1;
 	b <= dp2;
 	c <= dp3;
 	d <= dp4;
-	d1 <= not y;
+	d1 <= y;
 end boolean1_arch;
