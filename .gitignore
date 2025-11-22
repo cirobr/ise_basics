@@ -1,6 +1,7 @@
 _ngo/
 _xmsgs/
 iseconfig/
+isim/
 xlnx_auto_0_xdb/
 xst/
 
@@ -18,7 +19,9 @@ xst/
 *.bld
 *.cmd_log
 *.drc
+*.exe
 *.gise
+*.ini
 *.jhd
 *.html
 *.lso
@@ -35,11 +38,14 @@ xst/
 *.unroutes
 *.ut
 *.vhf
+*.wdb
 *.xpi
 *.xreport
 *.xrpt
 *.xst
 *.xwbt
 
+fuse*.*
+isim.*
 sch2HdlBatchFile
 webtalk*
