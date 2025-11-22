@@ -1,5 +1,6 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;   -- for to_unsigned conversion
 
 entity bcd_counter_0to9 is
     port (
@@ -9,7 +10,6 @@ entity bcd_counter_0to9 is
 
         BCD_OUT   : out std_logic_vector(3 downto 0);  -- BCD value 0000 to 1001
         CARRY_OUT : out std_logic                      -- Pulse when rolling from 9 → 0
-        D1, D2, D3, D4 : out std_logic                 -- LED outputs for testing
     );
 end entity;
 
@@ -41,9 +41,5 @@ begin
 
     -- Convert integer digit to BCD vector
     BCD_OUT <= std_logic_vector(to_unsigned(digit, 4));
-    D1 <= BCD_OUT(3);  -- MSB for testing
-    D2 <= BCD_OUT(2);
-    D3 <= BCD_OUT(1);
-    D4 <= BCD_OUT(0);  -- LSB for testing
 
 end architecture bcd_counter_0to9_arch;

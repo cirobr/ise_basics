@@ -4,8 +4,7 @@ use IEEE.std_logic_1164.all;
 entity clk_1hz_generator is
     port (
         CLK_12MHZ : in  std_logic;   -- 12 MHz input clock (pin D9)
-        CLK_1HZ   : out std_logic;   -- 1 Hz output with 50% duty cycle
-        -- D8        : out std_logic    -- D8 led output (for testing)
+        CLK_1HZ   : out std_logic    -- 1 Hz output with 50% duty cycle
     );
 end entity;
 
@@ -31,6 +30,5 @@ begin
     end process;
 
     CLK_1HZ <= clk_1hz_i;
-    D8      <= clk_1hz_i;  -- for testing
 
 end architecture clk_1hz_generator_arch;
