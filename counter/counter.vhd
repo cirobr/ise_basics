@@ -41,7 +41,7 @@ D1 <= ones_bcd(3);    -- MSB
 D2 <= ones_bcd(2);
 D3 <= ones_bcd(1);
 D4 <= ones_bcd(0);    -- LSB
--- CARRY <= carry_to_tens;
-CARRY <= '0';  -- disable carry for now
+CARRY <= carry_to_tens;
+-- CARRY <= '0';  -- disable carry for now
 
 end architecture counter_arch;
