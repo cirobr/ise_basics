@@ -48,9 +48,7 @@ architecture seven_segments_driver_arch of seven_segments_driver is
 begin
 
     -- Convert 4-bit input to integer index and drive the pattern
-    -- This is concurrent – no process needed!
     segments <= SEG_PAT(to_integer(unsigned(BCD_IN)));
-
     -- Output: segments + decimal point (off = '1')
     SEGMENTS_OUT <= segments & '1';
 

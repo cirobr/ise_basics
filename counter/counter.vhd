@@ -28,7 +28,7 @@ end entity;
 
 architecture counter_arch of counter is
     signal tick_1hz      : std_logic;
-    signal ones_bcd      : std_logic_vector(3 downto 0);
+    signal zeros_bcd     : std_logic_vector(3 downto 0);
     signal carry_to_tens : std_logic;
     signal segments      : std_logic_vector(7 downto 0);
 
@@ -47,22 +47,22 @@ u2: entity work.bcd_counter_0to9
         CLK_1HZ   => tick_1hz,
         RESET_N   => '1',           -- or tie to a reset button
         ENABLE    => '1',           -- count only when button not pressed
-        BCD_OUT   => ones_bcd,
+        BCD_OUT   => zeros_bcd,
         CARRY_OUT => carry_to_tens
     );
 
 u3: entity work.seven_segments_driver
     port map (
-        BCD_IN       => ones_bcd,
+        BCD_IN       => zeros_bcd,
         SEGMENTS_OUT => segments
     );
 
 -- Output assignments
 CLK_1HZ <= tick_1hz;  -- for testing
-D1 <= ones_bcd(3);    -- MSB
-D2 <= ones_bcd(2);
-D3 <= ones_bcd(1);
-D4 <= ones_bcd(0);    -- LSB
+D1 <= zeros_bcd(3);    -- MSB
+D2 <= zeros_bcd(2);
+D3 <= zeros_bcd(1);
+D4 <= zeros_bcd(0);    -- LSB
 CARRY <= carry_to_tens;
 
 SevenSegment_a <= segments(7);  -- a
