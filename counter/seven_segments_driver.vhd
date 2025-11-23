@@ -17,14 +17,14 @@ entity seven_segments_driver is
         BCD_IN       : in  std_logic_vector(3 downto 0);  -- Input: 0000 to 1111
         SEGMENTS_OUT : out std_logic_vector(7 downto 0)   -- CA..CG + DP (active-low)
     );
-end entity seven_segments_driver;
+end entity;
 
-architecture rtl of seven_segments_driver is
+architecture seven_segments_driver_arch of seven_segments_driver is
 
     -- 7-segment patterns (active-low, common anode) for 0–F
     type pattern_array is array (0 to 15) of std_logic_vector(6 downto 0);
     constant SEG_PAT : pattern_array := (
-        0  => "0000001",  -- 0 active low
+        0  => "0000001",  -- 0
         1  => "1001111",  -- 1
         2  => "0010010",  -- 2
         3  => "0000110",  -- 3
@@ -54,4 +54,4 @@ begin
     -- Output: segments + decimal point (off = '1')
     SEGMENTS_OUT <= segments & '1';
 
-end architecture rtl;
+end architecture seven_segments_driver_arch;
