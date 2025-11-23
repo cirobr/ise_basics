@@ -1,6 +1,16 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
-use IEEE.numeric_std.all;   -- for to_unsigned conversion
+use IEEE.numeric_std.all;
+-- use IEEE.math_real.all;
+
+-- Testbench only
+-- use std.textio.all;
+-- use IEEE.std_logic_textio.all;
+
+-- Xilinx
+-- library UNISIM;
+-- use UNISIM.vcomponents.all;
+
 
 entity bcd_counter_0to9 is
     port (
