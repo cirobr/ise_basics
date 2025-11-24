@@ -21,7 +21,7 @@ end entity;
 
 architecture clk_1hz_generator_arch of clk_1hz_generator is
 
-    -- 12_000_000 / 2 = 6_000_000 → we toggle every 6 million cycles
+    -- 12_000_000 / 2 = 6_000_000 → we toggle every 6 million cycles for 50% duty cycle
     constant MAX_COUNT : integer := 5_999_999;
     signal   counter   : integer range 0 to MAX_COUNT := 0;
     signal   clk_1hz_i : std_logic := '0';
@@ -33,7 +33,7 @@ begin
         if rising_edge(CLK_12MHZ) then
             if counter = MAX_COUNT then
                 counter   <= 0;
-                clk_1hz_i <= not clk_1hz_i;   -- toggle → perfect 50% duty cycle
+                clk_1hz_i <= not clk_1hz_i;   -- toggle
             else
                 counter <= counter + 1;
             end if;

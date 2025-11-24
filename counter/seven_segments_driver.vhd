@@ -14,8 +14,9 @@ use IEEE.numeric_std.all;
 
 entity seven_segments_driver is
     port (
-        BCD_IN       : in  std_logic_vector(3 downto 0);  -- Input: 0000 to 1111
-        SEGMENTS_OUT : out std_logic_vector(7 downto 0)   -- CA..CG + DP (active-low)
+        BCH_IN       : in  std_logic_vector(3 downto 0);  -- Input: 0000 to 1111
+        DOT          : in  std_logic;                     -- Decimal point control (active-low)
+        SEGMENTS_OUT : out std_logic_vector(7 downto 0)   -- a..g + DP (active-low)
     );
 end entity;
 
@@ -48,8 +49,8 @@ architecture seven_segments_driver_arch of seven_segments_driver is
 begin
 
     -- Convert 4-bit input to integer index and drive the pattern
-    segments <= SEG_PAT(to_integer(unsigned(BCD_IN)));
+    segments <= SEG_PAT(to_integer(unsigned(BCH_IN)));
     -- Output: segments + decimal point (off = '1')
-    SEGMENTS_OUT <= segments & '1';
+    SEGMENTS_OUT <= segments & DOT;
 
 end architecture seven_segments_driver_arch;

@@ -134,11 +134,11 @@ CONFIG VCCAUX = "3.3" ;
     NET "SevenSegment_e"            LOC = C5      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;   #e
     NET "SevenSegment_f"            LOC = D6      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;   #f
     NET "SevenSegment_g"            LOC = C6      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;   #g
-    NET "SevenSegment_h"            LOC = A5      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;   #dot
+    NET "SevenSegment_dot"          LOC = A5      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;   #dot
     
-    NET "SevenSegmentEnable2"      LOC = B3      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;   #Enables for Seven Segment
-    NET "SevenSegmentEnable1"      LOC = A2      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;   
-    NET "SevenSegmentEnable0"      LOC = B2      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;
+    NET "SevenSegmentEnable_2"      LOC = B3      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;   #Enables for Seven Segment
+    NET "SevenSegmentEnable_1"      LOC = A2      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;   
+    NET "SevenSegmentEnable_0"      LOC = B2      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;
 
 ###################################################################################################################################################
 #                                                    Audio                                                                                        #
